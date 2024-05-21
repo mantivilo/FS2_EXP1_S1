@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #000000; /* Black */
+    --secondary-color: #FFD700; /* Gold */
+    --font-family: 'Arial, sans-serif';
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.categories a {
+    text-align: center;
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center them horizontally */
+}
+
+.categories img {
+    width: 150px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area, maintaining aspect ratio */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px; /* Add bottom margin to create space between the image and text */
+    transition: transform 0.2s;
+}
+
+.categories img:hover {
+    transform: scale(1.1);
+}
+
+.games {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.game {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1 1 30%; /* Allow the game divs to grow and shrink and take up 30% of the container */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.game img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+main {
+    padding-bottom: 50px; /* Add bottom padding to main content */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .categories, .games {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* New CSS rule for centering h2 */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
